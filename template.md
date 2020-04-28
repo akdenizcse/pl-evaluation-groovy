@@ -1,11 +1,14 @@
 # GROOVY LANGUAGE
 
-- History of the language: who/when invented it, which languages influenced it, etc.
-- Why was it invented
-- When/why shall we use it
-- How to setup an environment to use it in different platforms
-- Example codes
-- Things that are specific to this language?
+-Tarık Fatih Pınarcı
+-Alp Artun Güvendiren
+
+- History of the language: who/when invented it, which languages influenced it, etc. (Tarık Fatih Pınarcı - Alp Artun Güvendiren)
+- Why was it invented (Alp Artun Güvendiren)
+- When/why shall we use it (Tarık Fatih Pınarcı)
+- How to setup an environment to use it in different platforms (Tarık Fatih Pınarcı - Alp Artun Güvendiren )
+- Example codes (Tarık Fatih Pınarcı)
+- Things that are specific to this language? (Alp Artun Güvendiren) 
 
 
 
@@ -41,7 +44,7 @@ Influenced : Kotlin
 
 
 
-### Features of Groovy
+### Why Was It Invented - Features of Groovy
 
 - List, map, range, regular expression literals
 - Multimethod and metaprogramming
