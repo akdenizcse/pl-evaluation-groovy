@@ -119,7 +119,7 @@ Apache Groovy is an object-oriented dynamic programming language for Java virtua
 
 
 
- How to setup an environment to use it in different platforms
+ ## How to setup an environment to use it in different platforms
 
 
 
