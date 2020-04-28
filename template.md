@@ -241,22 +241,56 @@ groovy SomeScript
 ![](images/img1.png)
 Note: You can also install Groovy using the Zip file or as an Eclipse IDE. In this tutorial, we will stick to Windows Installer
 - Step 3) Launch the downloaded installer. Select language and click OK.
+
+
 ![](images/img2.png)
+
+
 - Step 4) Launch. In welcome screen, click NEXT
+
+
 ![](images/img3.png)
+
+
 - Step 5) Agree with the license terms
+
+
 ![](images/img4.png)
+
+
 - Step 6) Select components you want to install and click next
+
+
 ![](images/img5.png)
+
+
 - Step 7) Select Installation Directory and click Next
+
+
 ![](images/img6.png)
+
+
 - Step 8) Choose Start Menu Folder and Click Next
+
+
 ![](images/img7.png)
+
+
 - Step 9) Once install is done, let the paths default and click next
+
+
 ![](images/img8.png)
+
+
 - Step 10) Click Next.
+
+
 ![](images/img9.png)
+
+
 - Step 11) In start Menu search for Groovy Console
+
+
 ![](images/img10.png)
 
 
