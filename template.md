@@ -1,9 +1,9 @@
 # GROOVY LANGUAGE
 
-- Tarık Fatih Pınarcı
+Tarık Fatih Pınarcı
 
 
-- Alp Artun Güvendiren
+Alp Artun Güvendiren
 
 - History of the language: who/when invented it, which languages influenced it, etc. (Tarık Fatih Pınarcı - Alp Artun Güvendiren)
 - Why was it invented (Alp Artun Güvendiren)
