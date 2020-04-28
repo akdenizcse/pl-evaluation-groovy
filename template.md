@@ -521,3 +521,21 @@ You can use the step method for the same
 0.step(7,2){println "$it"}
 ```
 
+
+## KEY FEATURES THAT SPECIFIC TO GROOVY
+
+- Groovy is a programming language and also supports scripting language whereas Java is an object-oriented programming language.
+- Groovy supports multi-methods where the choice of running the method will be chosen at the time of runtime whereas Java provides multiple declarations of methods by choosing them at the time of compilation rather than run time.
+- In Groovy, Automatic Resource Management mechanism is not available and static, anonymous inner classes whereas Java provides automatic resource management from Java 7 version and has upper hand in terms of inner static classes or anonymous classes.
+- In Groovy there are functional programming features such as Lambda functions; functional interfaces whereas Java has Lambda functions, functional interfaces, and much other streaming and parallel operations functions available from its JDK version 8 onwards.
+- In Groovy, String and character literals can be defined and declared using single or double quote format whereas Java has only double quote format to declare and define a string literal or character literal.
+- In Groovy everything is Object and uses only Objects and hence there is no concept of autoboxing or unboxing and no conversion of primitives whereas Java has primitive data types and Wrapper classes to perform autoboxing and auto-unboxing either explicitly or implicitly.
+- In Groovy, the automatic widening and narrowing of data types have a lot of wide scope with many conversions whereas Java has limitations in narrowing or widening the data types.
+- Groovy has a default access modifier as public for all its kind of class members or data whereas Java has default access level as package level depending on the class members type.
+- Groovy generates the getters and setter automatically in its class to access and modify the members of the class whereas in Java they have to be explicitly mentioned in the class with access modifiers.
+- Groovy has Groovy beans whereas Java has Java beans.
+- Groovy is also called as a superset of Java as the Java programs can be run on a Groovy environment whereas Java programs cannot be run always on Groovy environment.
+- Groovy has simpler syntax in defining the types by using simply def to declare a variable whereas Java has different types of type names to be used to declare the variable or any methods or members of the class.
+- Groovy does not require any main method or entry point of a method to run the class or any program whereas Java has a requirement of the main method inside a class to run the program.
+
+
