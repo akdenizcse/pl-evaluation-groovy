@@ -305,6 +305,19 @@ Note: You can also install Groovy using the Zip file or as an Eclipse IDE. In th
 
 
 
+## EXAMPLE CODES
+
+### GROOVY HELLO WORLD EXAMPLE
+
+Consider we want to print a simple string "Hello World" in Java. The code to achieve this would be
+
+```
+public class Demo {
+    public static void main(String args[]) {
+        System.out.println("Hello World");
+    }
+}
+```
 
 
 
