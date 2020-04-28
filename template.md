@@ -9,7 +9,7 @@ ProgLangName
 
 
 
-HISTORY OF THE LANGUAGE
+# HISTORY OF THE LANGUAGE
 
 James Strachan first talked about the development of Groovy on his blog in August 2003. In March 2004, Groovy was submitted to the JCP as JSR 241 and accepted by ballot. Several versions were released between 2004 and 2006. After the Java Community Process (JCP) standardization effort began, the version numbering changed, and a version called "1.0" was released on January 2, 2007. After various betas and release candidates numbered 1.1, on December 7, 2007, Groovy 1.1 Final was released and immediately renumbered as Groovy 1.5 to reflect the many changes made.
 
@@ -41,7 +41,7 @@ Influenced : Kotlin
 
 
 
-Features of Groovy
+## Features of Groovy
 
 ● List, map, range, regular expression literals
 ● Multimethod and metaprogramming
@@ -71,7 +71,7 @@ Unlike Java, a Groovy source code file can be executed as an (uncompiled) script
 
 
 
-WHY WE SHOULD USE GROOVY ?
+# WHY WE SHOULD USE GROOVY ?
 
 Here, are major reasons why you should use Groovy-
 
