@@ -1,7 +1,7 @@
 # GROOVY LANGUAGE
 
 #### Collaborators
-Tarık Fatih Pınarcı
+Tarık Fatih Pınarcı and
 Alp Artun Güvendiren
 
 - History of the language: who/when invented it, which languages influenced it, etc. (Tarık Fatih Pınarcı - Alp Artun Güvendiren)
