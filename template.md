@@ -307,7 +307,7 @@ Note: You can also install Groovy using the Zip file or as an Eclipse IDE. In th
 
 ## EXAMPLE CODES
 
-### GROOVY HELLO WORLD EXAMPLE
+### Groovy Hello World Example
 
 Consider we want to print a simple string "Hello World" in Java. The code to achieve this would be
 
@@ -319,22 +319,205 @@ public class Demo {
 }
 ```
 
+The above code is valid in both Java and Groovy as Groovy is a superset of Java. But the advantage with Groovy is that we can do we away with class creation, public method creation, etc and achieve the same output with a single line code as follows:
+
+```
+println "Hello World." 
+
+```
+
+There is no need for semicolons
+
+There is no need for parenthesis
+
+System.out.println is reduced to println
 
 
+### Groovy Variables
 
 
+In Java, static binding is compulsory. Meaning the type of a variable has to be declared in advance.
 
 
+```
+public class Demo {
+    public static void main(String args[]) {
+        int x = 104;
+        System.out.println(x);
+        //x = "Guru99";
+    }
+}
+
+```
+In the above example type of variable (integer) is declared in advance using the keyword "int". If you were to declare a floating point number you use the keyword float.
+
+If you try to assign a String value to an int (uncomment line #5), you will get the following error
+
+```
+Demo.java:5: error: incompatible types: String cannot be converted to int
+x = "Guru99";
+
+```
+
+In contrast, Groovy supports Dynamic Typing. Variables are defined using the keyword "def," and the type of a variable does not need to be declared in advance. The compiler figures out the variable type at runtime and you can even the variable type.
+
+Consider the following groovy example,
+
+```
+def x = 104
+println x.getClass()
+x = "Guru99"
+println x.getClass()
+
+```
+
+Output
+
+```
+class java.lang.Integer
+class java.lang.String
+
+```
+In Groovy, you can create multiline strings. Just ensure that you enclosed the String in triple quotes.
+
+```
+def x = """Groovy
+at
+Guru99"""
+println x
+
+```
+Output
+
+```
+Groovy
+at
+Guru99
+
+```
+
+Note: You can still variable types like byte, short, int, long, etc with Groovy. But you cannot dynamically change the variable type as you have explicitly declared it.
+
+Consider the following code:
+
+```
+int x = 104
+println x
+x = "Guru99"
+
+```
+
+It gives the following error.
 
 
+```
+104
+Caught: org.codehaus.groovy.runtime.typehandling.GroovyCastException: Cannot cast object 'Guru99' with class 'java.lang.String' to class 'int'
+org.codehaus.groovy.runtime.typehandling.GroovyCastException: Cannot cast object 'Guru99' with class 'java.lang.String' to class 'int'
+    at jdoodle.run(jdoodle.groovy:3)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Command exited with non-zero status 1
+
+```
 
 
+### Groovy-Operators
+An operator is a symbol which tells the compiler to do certain mathematical or logical manipulations.
+
+Groovy has the following five types of operators –
+
+- Arithmetic operators: Add (+), Subtract (-), Multiplication (*), Division(/)
+- Relational operators: equal to (==), Not equal to (!=), Less than (<) Less than or equal to (<=), Greater than (>), Greater than or equal to (>=)
+- Logical operators: And (&&), Or(||), Not(!)
+- Bitwise operators: And(&), Or(|), (^), Xor or Exclusive-or operator
+- Assignment operators: Negation operator (~)
 
 
+### Groovy-Loops
+
+In Java, you would define a loop as follows
 
 
+```
+public class Demo {
+    public static void main(String args[]) {
+        for (int x = 0; x <= 5; x++) {
+            System.out.println(x);
+        }
+    }
+}
+
+```
+
+Output
+
+```
+0
+1
+2
+3
+4
+```
+You can achieve the same output in Groovy using upto keywords
+
+```
+0.upto(4) {println "$it"}
+
+```
+
+You get the same output as above. $it is a closure that gives the value of the current loop.
+
+Consider the following code
 
 
+```
+2.upto(4) {println "$it"}
+
+```
+
+It gives an output
+
+```
+2
+3
+4
+```
+
+You can also use the "times" keyword to get the same output
 
 
+```
+5.times{println "$it"}
+
+```
+
+Consider, you want to print 0,2,4,6 with for loop in Java
+
+
+```
+public class Demo {
+    public static void main(String args[]) {
+        for (int x = 0; x <= 5; x=x+2) {
+            System.out.println(x);
+        }
+    }
+}
+```
+
+Output:
+
+```
+0
+2
+4
+6
+```
+
+You can use the step method for the same
+
+```
+0.step(7,2){println "$it"}
+```
 
