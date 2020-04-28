@@ -121,12 +121,12 @@ Apache Groovy is an object-oriented dynamic programming language for Java virtua
 
 
 ## Install Groovy
-- 1. Download
+### 1. Download
 In this download area, you will be able to download the distribution (binary and source), the Windows installer and the documentation for Groovy.
 
 For a quick and effortless start on Mac OSX, Linux or Cygwin, you can use SDKMAN! (The Software Development Kit Manager) to download and configure any Groovy version of your choice. Basic instructions can be found below.
 
-- 1.1. Stable
+#### 1.1. Stable
 Download zip: Binary Release | Source Release
 
 Download documentation: JavaDoc and zipped online documentation
@@ -137,18 +137,18 @@ You can learn more about this version in the release notes or in the changelog.
 
 If you plan on using invokedynamic support, read those notes.
 
-- 1.2. Snapshots
+#### 1.2. Snapshots
 For those who want to test the very latest versions of Groovy and live on the bleeding edge, you can use our snapshot builds. As soon as a build succeeds on our continuous integration server a snapshot is deployed to Artifactory’s OSS snapshot repository.
 
-- 1.3. Prerequisites
+#### 1.3. Prerequisites
 Groovy 2.5 requires Java 6+ with full support up to Java 8. There are currently some known issues for some aspects when using Java 9 snapshots. The groovy-nio module requires Java 7+. Using Groovy’s invokeDynamic features require Java 7+ but we recommend Java 8.
 
 The Groovy CI server is also useful to look at to confirm supported Java versions for different Groovy releases. The test suite (getting close to 10000 tests) runs for the currently supported streams of Groovy across all the main versions of Java each stream supports.
 
-- 2. Maven Repository
+### 2. Maven Repository
 If you wish to embed Groovy in your application, you may just prefer to point to your favourite maven repositories or the JCenter maven repository.
 
-- 2.1. Stable Release
+#### 2.1. Stable Release
 Gradle	Maven	Explanation
 'org.codehaus.groovy:groovy:2.5.9'
 
@@ -170,7 +170,7 @@ The core plus all the modules. Optional dependencies are marked as optional. You
 
 To use the InvokeDynamic version of the jars just append ':indy' for Gradle or <classifier>indy</classifier> for Maven.
 
-- 3. SDKMAN! (The Software Development Kit Manager)
+### 3. SDKMAN! (The Software Development Kit Manager)
 This tool makes installing Groovy on any Bash platform (Mac OSX, Linux, Cygwin, Solaris or FreeBSD) very easy.
 
 Simply open a new terminal and enter:
@@ -189,29 +189,29 @@ After installation is complete and you’ve made it your default version, test i
 $ groovy -version
 That’s all there is to it!
 
-- 4. Other ways to get Groovy
-- 4.1. Installation on Mac OS X
-- 4.1.1. MacPorts
+### 4. Other ways to get Groovy
+#### 4.1. Installation on Mac OS X
+##### 4.1.1. MacPorts
 If you’re on MacOS and have MacPorts installed, you can run:
 
 sudo port install groovy
-- 4.1.2. Homebrew
+##### 4.1.2. Homebrew
 If you’re on MacOS and have Homebrew installed, you can run:
 
 brew install groovy
-- 4.2. Installation on Windows
+##### 4.2. Installation on Windows
 If you’re on Windows, you can also use the NSIS Windows installer.
 
-- 4.3. Other Distributions
+#### 4.3. Other Distributions
 You may download other distributions of Groovy from this site.
 
-- 4.4. Source Code
+#### 4.4. Source Code
 If you prefer to live on the bleeding edge, you can also grab the source code from GitHub.
 
-- 4.5. IDE plugin
+#### 4.5. IDE plugin
 If you are an IDE user, you can just grab the latest IDE plugin and follow the plugin installation instructions.
 
-- 5. Install Binary
+### 5. Install Binary
 These instructions describe how to install a binary distribution of Groovy.
 
 First, Download a binary distribution of Groovy and unpack it into some file on your local file system.
