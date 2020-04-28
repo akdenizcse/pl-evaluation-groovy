@@ -525,7 +525,7 @@ You can use the step method for the same
 ```
 
 
-## KEY FEATURES THAT SPECIFIC TO GROOVY
+## KEY FEATURES THAT ARE SPECIFIC TO GROOVY
 
 - Groovy is a programming language and also supports scripting language whereas Java is an object-oriented programming language.
 - Groovy supports multi-methods where the choice of running the method will be chosen at the time of runtime whereas Java provides multiple declarations of methods by choosing them at the time of compilation rather than run time.
