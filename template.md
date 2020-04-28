@@ -1,4 +1,4 @@
-ProgLangName
+# GROOVY LANGUAGE
 
 - History of the language: who/when invented it, which languages influenced it, etc.
 - Why was it invented
