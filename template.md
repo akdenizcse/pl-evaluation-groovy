@@ -541,5 +541,5 @@ You can use the step method for the same
 - Groovy is also called as a superset of Java as the Java programs can be run on a Groovy environment whereas Java programs cannot be run always on Groovy environment.
 - Groovy has simpler syntax in defining the types by using simply def to declare a variable whereas Java has different types of type names to be used to declare the variable or any methods or members of the class.
 - Groovy does not require any main method or entry point of a method to run the class or any program whereas Java has a requirement of the main method inside a class to run the program.
-
+.
 
