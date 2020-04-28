@@ -234,16 +234,23 @@ groovy SomeScript
 
 
 
+### Here Is The Instructions For Installing Groovy
 
-
-
-
-
-
-
-
-
-
-
-
+- Step 1) Ensure you have Java installed. https://www.guru99.com/install-java.html
+- Step 2) Go to http://groovy-lang.org/download.html and click installer.
 ![](images/img1.png)
+Note: You can also install Groovy using the Zip file or as an Eclipse IDE. In this tutorial, we will stick to Windows Installer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
