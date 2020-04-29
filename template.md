@@ -611,7 +611,7 @@ def sha1 = password.digest('SHA-1')
 ### Operators
 Groovy supports the most common operators found in other languages. But that's not enough the are some more interesting operators Groovy provides. Here are a few:
 
-###### Elvis operator
+##### Elvis operator
 This is a shorter version of the ternary operator. This is very useful, for example, when the condition could evaluate to null.
 ```
 // Instead of this
