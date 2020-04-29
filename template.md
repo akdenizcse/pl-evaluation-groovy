@@ -49,7 +49,7 @@ Influenced : Kotlin
 
 
 
-## WHY WAS IT INVENTED - Features of Groovy
+## WHY WAS IT INVENTED ?
 
 
 
