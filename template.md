@@ -684,6 +684,320 @@ def found = "abcc5" =~ pattern
 def found = "abcc5" ==~ pattern
 // found == true
 ```
+*******************
+### Object-Oriented
+
+In Groovy, as in any other Object-Oriented language, there is the concept of classes and objects to represent the objected oriented nature of the programming language. A Groovy class is a collection of data and the methods that operate on that data. Together, the data and methods of a class are used to represent some real world object from the problem domain.
+
+A class in Groovy declares the state (data) and the behavior of objects defined by that class. Hence, a Groovy class describes both the instance fields and methods for that class.
+
+Following is an example of a class in Groovy. The name of the class is Student which has two fields – StudentID and StudentName. In the main function, we are creating an object of this class and assigning values to the StudentID and StudentName of the object.
+```
+class Student {
+   int StudentID;
+   String StudentName;
+	
+   static void main(String[] args) {
+      Student st = new Student();
+      st.StudentID = 1;
+      st.StudentName = "Joe"     
+   } 
+}
+```
+#### getter and setter Methods
+ In any programming language, it always a practice to hide the instance members with the private keyword and instead provide getter and setter methods to set and get the values of the instance variables accordingly. The following example shows how this can be done.
+```
+Live Demo
+class Student {
+   private int StudentID;
+   private String StudentName;
+	
+   void setStudentID(int pID) {
+      StudentID = pID;
+   }
+	
+   void setStudentName(String pName) {
+      StudentName = pName;
+   }
+	
+   int getStudentID() {
+      return this.StudentID;
+   }
+	
+   String getStudentName() {
+      return this.StudentName;
+   }
+	
+   static void main(String[] args) {
+      Student st = new Student();
+      st.setStudentID(1);
+      st.setStudentName("Joe");
+		
+      println(st.getStudentID());
+      println(st.getStudentName());
+   } 
+}
+```
+When we run the above program, we will get the following result −
+```
+1 
+Joe
+```
+Note the following key points about the above program.
+
+- In the class both the studentID and studentName are marked as private which means that they cannot be accessed from outside of the class.  
+- Each instance member has its own getter and setter method. The getter method returns the value of the instance variable, for example the method int getStudentID() and the setter method sets the value of the instance ID, for example the method - void setStudentName(String pName)
+
+### Instance Methods
+It’s normally a natural to include more methods inside of the class which actually does some sort of functionality for the class. In our student example, let’s add instance members of Marks1, Marks2 and Marks3 to denote the marks of the student in 3 subjects. We will then add a new instance method which will calculate the total marks of the student. Following is how the code would look like.
+
+In the following example, the method Total is an additional Instance method which has some logic built into it.
+```
+class Student {
+   int StudentID;
+   String StudentName;
+	
+   int Marks1;
+   int Marks2;
+   int Marks3;
+	
+   int Total() {
+      return Marks1+Marks2+Marks3;
+   }
+	
+   static void main(String[] args) {
+      Student st = new Student();
+      st.StudentID = 1;
+      st.StudentName="Joe";
+		
+      st.Marks1 = 10;
+      st.Marks2 = 20;
+      st.Marks3 = 30;
+		
+      println(st.Total());
+   }
+}
+```
+When we run the above program, we will get the following result.
+```
+60
+```
+### Creating Multiple Objects
+One can also create multiple objects of a class. Following is the example of how this can be achieved. In here we are creating 3 objects (st, st1 and st2) and calling their instance members and instance methods accordingly.
+
+```
+class Student {
+   int StudentID;
+   String StudentName;
+	
+   int Marks1;
+   int Marks2;
+   int Marks3;
+	
+   int Total() { 
+      return Marks1+Marks2+Marks3;
+   } 
+	
+   static void main(String[] args) {
+      Student st = new Student();
+      st.StudentID = 1;
+      st.StudentName = "Joe";
+		
+      st.Marks1 = 10;
+      st.Marks2 = 20;
+      st.Marks3 = 30;
+		
+      println(st.Total()); 
+   
+      Student st1 = new Student();
+      st.StudentID = 1;
+      st.StudentName = "Joe";
+		
+      st.Marks1 = 10;
+      st.Marks2 = 20;
+      st.Marks3 = 40;
+		
+      println(st.Total());  
+        
+      Student st3 = new Student();
+      st.StudentID = 1;
+      st.StudentName = "Joe";
+		
+      st.Marks1 = 10; 
+      st.Marks2 = 20;
+      st.Marks3 = 50;
+		
+      println(st.Total());
+   } 
+} 
+```
+When we run the above program, we will get the following result −
+```
+60 
+70 
+80 
+```
+### Inheritance
+Inheritance can be defined as the process where one class acquires the properties (methods and fields) of another. With the use of inheritance the information is made manageable in a hierarchical order.
+
+The class which inherits the properties of other is known as subclass (derived class, child class) and the class whose properties are inherited is known as superclass (base class, parent class).
+
+Extends
+extends is the keyword used to inherit the properties of a class. Given below is the syntax of extends keyword. In the following example we are doing the following things:
+
+- Creating a class called Person. This class has one instance member called name.  
+- Creating a class called Student which extends from the Person class. Note that the name instance member which is defined in the Person class gets inherited in the Student class.  
+- In the Student class constructor, we are calling the base class constructor.  
+- In our Student class, we are adding 2 additional instance members of StudentID and Marks1.
+```
+class Example {
+   static void main(String[] args) {
+      Student st = new Student();
+      st.StudentID = 1;
+		
+      st.Marks1 = 10;
+      st.name = "Joe";
+		
+      println(st.name);
+   }
+} 
+
+class Person {
+   public String name;
+   public Person() {}  
+} 
+
+class Student extends Person {
+   int StudentID
+   int Marks1;
+	
+   public Student() {
+      super();
+   } 
+}  
+```
+When we run the above program, we will get the following result −
+```
+Joe
+```
+### Inner Classes
+Inner classes are defined within another classes. The enclosing class can use the inner class as usual. On the other side, a inner class can access members of its enclosing class, even if they are private. Classes other than the enclosing class are not allowed to access inner classes.
+
+Following is an example of an Outer and Inner class. In the following example we are doing the following things :
+
+- Creating an class called Outer which will be our outer class.  
+- Defining a string called name in our Outer class.  
+- Creating an Inner or nested class inside of our Outer class.  
+- Note that in the inner class we are able to access the name instance member defined in the Outer class.   
+```
+class Example { 
+   static void main(String[] args) { 
+      Outer outobj = new Outer(); 
+      outobj.name = "Joe"; 
+      outobj.callInnerMethod() 
+   } 
+} 
+
+class Outer { 
+   String name;
+	
+   def callInnerMethod() { 
+      new Inner().methodA() 
+   } 
+	
+   class Inner {
+      def methodA() { 
+         println(name); 
+      } 
+   } 
+	
+}  
+```
+When we run the above program, we will get the following result −
+```
+Joe
+```
+### Abstract Classes
+Abstract classes represent generic concepts, thus, they cannot be instantiated, being created to be subclassed. Their members include fields/properties and abstract or concrete methods. Abstract methods do not have implementation, and must be implemented by concrete subclasses. Abstract classes must be declared with abstract keyword. Abstract methods must also be declared with abstract keyword.
+
+In the following example, note that the Person class is now made into an abstract class and cannot be instantiated. Also note that there is an abstract method called DisplayMarks in the abstract class which has no implementation details. In the student class it is mandatory to add the implementation details.
+```
+class Example { 
+   static void main(String[] args) { 
+      Student st = new Student(); 
+      st.StudentID = 1;
+		
+      st.Marks1 = 10; 
+      st.name="Joe"; 
+		
+      println(st.name); 
+      println(st.DisplayMarks()); 
+   } 
+} 
+
+abstract class Person { 
+   public String name; 
+   public Person() { } 
+   abstract void DisplayMarks();
+}
+ 
+class Student extends Person { 
+   int StudentID 
+   int Marks1; 
+	
+   public Student() { 
+      super(); 
+   } 
+	
+   void DisplayMarks() { 
+      println(Marks1); 
+   }  
+} 
+```
+When we run the above program, we will get the following result −
+```
+Joe 
+10 
+null
+```
+### Interfaces
+An interface defines a contract that a class needs to conform to. An interface only defines a list of methods that need to be implemented, but does not define the methods implementation. An interface needs to be declared using the interface keyword. An interface only defines method signatures. Methods of an interface are always public. It is an error to use protected or private methods in interfaces.
+
+Following is an example of an interface in groovy. In the following example we are doing the following things:
+
+- Creating an interface called Marks and creating an interface method called DisplayMarks.  
+- In the class definition, we are using the implements keyword to implement the interface.  
+- Because we are implementing the interface we have to provide the implementation for the DisplayMarks method.  
+ 
+```
+class Example {
+   static void main(String[] args) {
+      Student st = new Student();
+      st.StudentID = 1;
+      st.Marks1 = 10;
+      println(st.DisplayMarks());
+   } 
+} 
+
+interface Marks { 
+   void DisplayMarks(); 
+} 
+
+class Student implements Marks {
+   int StudentID
+   int Marks1;
+	
+   void DisplayMarks() {
+      println(Marks1);
+   }
+}
+```
+When we run the above program, we will get the following result −
+```
+10
+null
+```
+******************************
 *******************************
 
 
