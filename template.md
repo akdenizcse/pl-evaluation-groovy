@@ -624,8 +624,9 @@ Another operator that can be used to check if a variable is null is the Safe Nav
 ```
 def user = person?.name
 // user == null
-Use this operator when you want to avoid NullPointerExceptions. In case the object you're accessing is null, this operator will return a null instead of throwing a NullPointerException.
 ```
+Use this operator when you want to avoid NullPointerExceptions. In case the object you're accessing is null, this operator will return a null instead of throwing a NullPointerException.
+
 ##### Spread Operator
 The spread operator (.*) is used to execute an action on all items of a Collection, instead of using a loop or a closure as we've seen before. For example:
 ```
@@ -684,7 +685,6 @@ def found = "abcc5" =~ pattern
 def found = "abcc5" ==~ pattern
 // found == true
 ```
-*******************
 ### Object-Oriented
 
 In Groovy, as in any other Object-Oriented language, there is the concept of classes and objects to represent the objected oriented nature of the programming language. A Groovy class is a collection of data and the methods that operate on that data. Together, the data and methods of a class are used to represent some real world object from the problem domain.
@@ -707,7 +707,6 @@ class Student {
 #### getter and setter Methods
  In any programming language, it always a practice to hide the instance members with the private keyword and instead provide getter and setter methods to set and get the values of the instance variables accordingly. The following example shows how this can be done.
 ```
-Live Demo
 class Student {
    private int StudentID;
    private String StudentName;
@@ -842,7 +841,7 @@ Inheritance can be defined as the process where one class acquires the propertie
 
 The class which inherits the properties of other is known as subclass (derived class, child class) and the class whose properties are inherited is known as superclass (base class, parent class).
 
-Extends
+#### Extends
 extends is the keyword used to inherit the properties of a class. Given below is the syntax of extends keyword. In the following example we are doing the following things:
 
 - Creating a class called Person. This class has one instance member called name.  
@@ -997,12 +996,6 @@ When we run the above program, we will get the following result −
 10
 null
 ```
-******************************
-*******************************
-
-
-
-
 
 ## KEY FEATURES THAT ARE SPECIFIC TO GROOVY
 ### Advantages and Disadvantages of Groovy
