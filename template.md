@@ -702,3 +702,8 @@ Let’s explore some of the well-known advantages and disadvantages of Groovy.
 - String interpolation (better building among strings showing values).  
 - Regex’s getting first-class residents.
 
+#### Disadvantages:
+- The Groovy plugins (program conclusion, syntax coloring,) – around for Eclipse – remains incredibly buggy.  
+- No base code format for Groovy: This can be an actual drawback for Groovy currently. In case you are doing work in a group this might be a headache: reading the program based on a format, CVS evaluate can be hard, a few examples to say.  
+- You should learn new ideas prefer: closures – which will benefit once you understand them! Without closures, you are unable to apply inner classes in Groovy that are mainly essentially written unit testing.  
+
