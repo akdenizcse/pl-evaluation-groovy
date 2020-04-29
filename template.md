@@ -691,5 +691,14 @@ def found = "abcc5" ==~ pattern
 
 
 ## KEY FEATURES THAT ARE SPECIFIC TO GROOVY
+### Advantages and Disadvantages of Groovy
+Let’s explore some of the well-known advantages and disadvantages of Groovy.
 
+#### Advantages:
+-Dynamic typing (enables you to program faster, at least primarily).
+-Currying/partial software (enabling you to a replica of the function with more than one arguments set).
+-Tooling support to get useful APIs applying @DelegatesTo.
+-Native associative array/key-value mapping support (you are able to generate an associative array literal).
+-String interpolation (better building among strings showing values).
+-Regex’s getting first-class residents.
 
