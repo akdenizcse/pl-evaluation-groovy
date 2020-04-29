@@ -504,6 +504,191 @@ You can use the step method for the same
 0.step(7,2){println "$it"}
 ```
 
+### Declaring Lists/Maps
+Groovy is an optionally typed language, you can use the def keyword to declare variables. For example declaring lists or maps is as simple as:
+
+```
+def myList = []
+def myMap = [:]
+```
+
+***********************************************************
+### String Interpolation
+ Interpolation is the act of replacing a placeholder in the string with its value upon evaluation of the string.
+
+In Groovy, placeholders are surrounded by ${}or prefixed with $ for dotted expressions.
+
+In the previous snippet we can see an example of string interpolation. But here is another one:
+
+```
+try{
+    throw new Exception()
+}catch(Exception e){
+    println "Error during operation. Cause: ${e}"
+}
+```
+### Casting
+Groovy makes casting very easy and readable with the as operator. To use this operand the casted class must implement the asType()method. This already happens for standard classes like lists, enumerators, etc.
+
+For example:
+```
+enum Employee {
+    MIKE,
+    HANNA
+}
+
+String name = "JOHN"
+
+try{
+    name as Employee
+}catch(Exception e){
+    println "Could not find employee ${name}. Cause: ${e}"
+}
+```
+### Json to Classes
+I work a lot with Web Services with Json responses so inevitably I have had to map responses to Groovy classes. This comes out of the box with Groovy and it's extremely easy, just pass a Json through the class constructor.
+```
+String response = '{name:"John", position: "Developer", age: 32}'
+
+// Json response to map
+def employeeMap = new JsonSlurper().parseText(response)
+// Consider an Employee class with the attributes name, position and age
+Employee employee = new Employee(employeeMap)
+```
+That's it. We just built an employee object from a Json string.
+
+The other way around is just as simple:
+```
+def json = JsonOutput.toJson(employee)
+// json == '{name:"John", position: "Developer", age: 32}'
+```
+### Assertions
+Groovy has the same assert statement as Java, but way more powerful - hence it's name - Power Assertions.
+
+The difference being its output in case the assertions resolves to false. For example:
+```
+def contacts = ['John', 'Anna']
+
+assert contacts.isEmpty()
+
+//Output:
+//ERROR org.codehaus.groovy.runtime.powerassert.PowerAssetionError:
+//assert contacts.isEmpty()
+//       |        |
+//       |        false
+//       [John, Anna]
+```
+This allows you to very easily understand what has made the assertion fail.
+
+### Defining variables
+Groovy is optionally type, this means that you can define a variable with its type or simply use the keyword def. This applies as well when declaring List or Maps, their types are optional. For example:
+```
+String name
+int age
+def address
+List friends = ['John', 'Anna']
+Map family = ['Mother':'Mary', 'Father':'Joseph']
+
+def getFamilyMember("Mother"){ ... }
+```
+For those of you who know Javascript, this is similar to the keyword var.
+
+This gives you incredible flexibility, however be cautious when using it. It might make it harder on your team or someone else using your code to read it and understand what is expected as input or output.
+
+### Hashing
+If you've ever used Java, you probably know how verbose it is to hash a string - unless you're using a third-party library.
+
+Groovy 2.5 brings us some useful methods to the String class. Calculating hashes is as simple as calling a method on a String. Groovy makes it simple:
+```
+def password = "thisIsMyPassword"
+
+def md5 = password.md5()
+def sha256 = password.sha256()
+//For other algorithms use digest() method
+def sha1 = password.digest('SHA-1')
+...
+```
+### Operators
+Groovy supports the most common operators found in other languages. But that's not enough the are some more interesting operators Groovy provides. Here are a few:
+
+###### Elvis operator
+This is a shorter version of the ternary operator. This is very useful, for example, when the condition could evaluate to null.
+```
+// Instead of this
+def user = person.name ? person.name : 'Guest'
+// Use this
+def user = person.name ?: 'Guest'
+```
+##### Safe navigation operator
+Another operator that can be used to check if a variable is null is the Safe Navigation Operator.
+```
+def user = person?.name
+// user == null
+Use this operator when you want to avoid NullPointerExceptions. In case the object you're accessing is null, this operator will return a null instead of throwing a NullPointerException.
+```
+##### Spread Operator
+The spread operator (.*) is used to execute an action on all items of a Collection, instead of using a loop or a closure as we've seen before. For example:
+```
+def numbers = [1,2,3,4,5,6]
+*numbers // == [1,2,3,4,5,6]
+
+def people = [
+    new Person(name: 'John', age: '25'),
+    new Person(name: 'Anna', age: '21')
+]
+
+def friends = people*.name // friends = ['John', 'Anna']
+```
+### Traits
+Traits are a structural construct of the language which allows:
+
+-              composition of behaviors
+
+-              runtime implementation of interfaces
+
+-              behavior overriding
+
+-              compatibility with static type checking/compilation
+
+I like to think of traits as interfaces where you can actually implements methods. It's very useful when you have a very complex and structured application and you want to keep things clean.
+
+It's definetly something I've missed in the early Java.
+
+Here's an example:
+```
+trait Sociable {
+    void greet() { println "Hello!" }
+}
+
+class Person implements Sociable {}
+
+Person p = new Person()
+p.greet() // Hello!
+```
+### Regular Expressions
+Groovy natively supports regular expressions and it's quite simple. It has 3 operators for regular expressions:
+
+- ~ this is the pattern operator, its the simple way to create an instance of java.util.regex.Pattern:
+```
+def pattern = ~"^abc{2}\d"
+// pattern instanceof Pattern == true
+```
+- =~ this is the find operator which will look for a pattern in a string and returns a Matcher:
+```
+def pattern = ~"abc{2}\d"
+def found = "abcc5" =~ pattern
+// found instanceof Matcher == true
+```
+- and finally the match operator ==~ which returns true if the string is a strict match of the regex:
+```
+def found = "abcc5" ==~ pattern
+// found == true
+```
+*******************************
+
+
+
+
 
 ## KEY FEATURES THAT ARE SPECIFIC TO GROOVY
 
