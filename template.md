@@ -51,31 +51,6 @@ Influenced : Kotlin
 
 ### Why Was It Invented - Features of Groovy
 
-- List, map, range, regular expression literals
-- Multimethod and metaprogramming
-- Groovy classes and scripts are usually stored in .groovy files
-- Scripts contain Groovy statements without any class declaration.
-- Scripts can also contain method definitions outside of class definitions.
-- It can be compiled and fully integrated with traditional Java application.
-- Language level support for maps, lists, regular expressions
-- Supports closures, dynamic typing, metaobject protocol
-- Support for static and dynamic typing & operator overloading
-- Literal declaration for lists (arrays), maps, ranges, and regular expressions
-
-
-
-Most valid Java files are also valid Groovy files. Although the two languages are similar, Groovy code can be more compact, because it does not need all the elements that Java needs. This makes it possible for Java programmers to learn Groovy gradually by starting with familiar Java syntax before acquiring more Groovy programming idioms.
-
-Groovy features not available in Java include both static and dynamic typing (with the keyword def), operator overloading, native syntax for lists and associative arrays (maps), native support for regular expressions, polymorphic iteration, string interpolation, added helper methods, and the safe navigation operator ?. to check automatically for null pointers (for example, variable?.method(), or variable?.field).
-
-Since version 2 Groovy also supports modularity (being able to ship only the needed jars according to the project needs, thus reducing the size of Groovy's library), type checking, static compiling, Project Coin syntax enhancements, multicatch blocks and ongoing performance enhancements using the invokedynamic instruction introduced in Java 7.
-
-Groovy provides native support for various markup languages such as XML and HTML, accomplished via an inline Document Object Model (DOM) syntax. This feature enables the definition and manipulation of many types of heterogeneous data assets with a uniform and concise syntax and programming methodology.
-
-Unlike Java, a Groovy source code file can be executed as an (uncompiled) script, if it contains code outside any class definition, if it is a class with a main method, or if it is a Runnable or GroovyTestCase. A Groovy script is fully parsed, compiled, and generated before executing (similar to Python and Ruby). This occurs under the hood, and the compiled version is not saved as an artifact of the process.
-
-
-
 
 
 
