@@ -8,7 +8,7 @@ Alp Artun Güvendiren
 - Why was it invented (Alp Artun Güvendiren)
 - When/why shall we use it (Tarık Fatih Pınarcı)
 - How to setup an environment to use it in different platforms (Tarık Fatih Pınarcı)
-- Example codes (Tarık Fatih Pınarcı)
+- Example codes (Alp Artun Güvendiren - Tarık Fatih Pınarcı)
 - Things that are specific to this language? (Alp Artun Güvendiren) 
 
 
