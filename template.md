@@ -7,7 +7,7 @@ Alp Artun Güvendiren
 - History of the language: who/when invented it, which languages influenced it, etc. (Tarık Fatih Pınarcı - Alp Artun Güvendiren)
 - Why was it invented (Alp Artun Güvendiren)
 - When/why shall we use it (Tarık Fatih Pınarcı)
-- How to setup an environment to use it in different platforms (Tarık Fatih Pınarcı - Alp Artun Güvendiren )
+- How to setup an environment to use it in different platforms (Tarık Fatih Pınarcı)
 - Example codes (Tarık Fatih Pınarcı)
 - Things that are specific to this language? (Alp Artun Güvendiren) 
 
